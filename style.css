@@ -1,0 +1,31 @@
+/* Styles for an element */
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+/* Styles for a class */
+.goal {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Styles for an id */
+#highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Additional styles */
+p {
+    font-family: Arial, sans-serif;
+    color: darkslategray;
+}
+
+.container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
