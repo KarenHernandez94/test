@@ -1,31 +1,120 @@
-/* Styles for an element */
-h1 {
-    color: rgb(10, 201, 74);
+/* Basic Reset */
+body, h1, h2, h3, p, ol, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
 }
 
-/* Styles for a class */
-.goal {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 10px 0;
+header img {
+    border-radius: 50%;
 }
 
-/* Styles for an id */
-#highlight {
-    background-color: rgb(209, 147, 32);
+/* Navigation Styles */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #35424a;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
 
-/* Additional styles */
-p {
-    font-family: Arial, sans-serif;
-    color: darkslategray;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.container {
+/* Aside Styles */
+aside {
+    background: #eaeaea;
+    padding: 15px;
+    border-left: 4px solid #35424a;
+}
+
+/* Main Section Styles */
+main {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #35424a;
+}
+
+ol {
+    margin: 10px 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
     border: 1px solid #ccc;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+    text-align: left;
+}
+
+caption {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Footer Styles */
+.footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #80f3bd;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Class Styles */
+.floatLeft {
+    float: left;
+    margin-right: 20px;
+}
+
+.clearFloats::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    nav {
+        font-size: 14px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
 }
