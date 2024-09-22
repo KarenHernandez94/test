@@ -1,6 +1,6 @@
 /* Styles for an element */
 h1 {
-    color: navy;
+    color: rgb(10, 201, 74);
     text-align: center;
 }
 
@@ -13,7 +13,7 @@ h1 {
 
 /* Styles for an id */
 #highlight {
-    background-color: yellow;
+    background-color: rgb(209, 147, 32);
     font-weight: bold;
 }
 
