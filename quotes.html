@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of the Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .links {
+            margin-top: 30px;
+        }
+        .link-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quotes of the Day</h1>
+    <div class="quote" id="quote"></div>
+
+    <script>
+        // list of quotes
+        const quotes = [
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Do not chase butterflies as they will fly away, instead tend to your garden and they will come to you."
+            "It does not matter how slowly you go as long as you do not stop.",
+            "Success usually comes to those who are too busy to be looking for it.",
+            "Opportunities don't happen, you create them."
+        ];
+
+        // Prompt user for a number
+        const userNumber = prompt("Enter a number:");
+        if (userNumber !== null) {
+            const index = userNumber % 5;
+            document.getElementById('quote').innerText = quotes[index];
+        }
+
+        // Array of favorite websites
+        let favoriteWebsites = [
+            "https://www.wikipedia.org",
+            "https://www.github.com",
+            "https://www.stackoverflow.com"
+        ];
+
+        // Display the original list of favorite websites
+        displayWebsites();
+
+        // Prompt user for their favorite website
+        const newWebsite = prompt("Enter your favorite website URL:");
+        if (newWebsite !== null && newWebsite !== "") {
+            favoriteWebsites.push(newWebsite);
+        }
+
+        // Delete the first website
+        favoriteWebsites.shift();
+
+        // Display the new list of favorite websites
+        displayWebsites();
+
+        function displayWebsites() {
+            const linksDiv = document.createElement('div');
+            linksDiv.className = 'links';
+            linksDiv.innerHTML = '<h2>Favorite Websites:</h2>';
+            
+            favoriteWebsites.forEach(url => {
+                const linkItem = document.createElement('div');
+                linkItem.className = 'link-item';
+                linkItem.innerHTML = `<a href="${url}" target="_blank">${url}</a>`;
+                linksDiv.appendChild(linkItem);
+            });
+
+            // Clear previous links and append new ones
+            const existingLinks = document.querySelector('.links');
+            if (existingLinks) {
+                existingLinks.remove();
+            }
+            document.body.appendChild(linksDiv);
+        }
+    </script>
+
+</body>
+</html>

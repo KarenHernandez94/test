@@ -23,6 +23,7 @@ header {
 
 header img {
     border-radius: 50%;
+    margin-top: 10px;
 }
 
 /* Navigation Styles */
@@ -47,6 +48,7 @@ aside {
     background: #eaeaea;
     padding: 15px;
     border-left: 4px solid #35424a;
+    margin-bottom: 20px; /* Space below aside */
 }
 
 /* Main Section Styles */
@@ -58,8 +60,13 @@ h2 {
     color: #35424a;
 }
 
+h3 {
+    margin-top: 20px;
+}
+
 ol {
     margin: 10px 0;
+    padding-left: 20px; /* Indentation for list items */
 }
 
 /* Table Styles */
